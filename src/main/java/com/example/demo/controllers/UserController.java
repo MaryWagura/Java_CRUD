@@ -15,14 +15,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-    @Controller
-    public class JSONToXMLMappingController {
 
-        @PostMapping(path = "/mapJsontoXML", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
-        public @ResponseBody UserRepository mapJsonToXML(@RequestBody final UserRepository request) {
-            return request;
-        }
-    }
     @Autowired
     private UserRepository userRepository;
 
